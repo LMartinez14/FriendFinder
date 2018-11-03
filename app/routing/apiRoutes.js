@@ -53,10 +53,10 @@ module.exports = function (app, path) {
 
          possiblePartnerData.push(friends[closestMatch]);
 
-         // add the new person to the existing array
+         // add the new user to the existing array
          friends.push(JSON.parse(postResponse));
 
-         // Push back the entire updated result immediately
+         // return
          fs.writeFile("app/data/friends.js", JSON.stringify(friends));
          res.send(possiblePartnerData[0]);
 
