@@ -11,4 +11,7 @@ Initial server must be listening through Heroku port by default and a node serve
 As you can see, the front end is available to view though the back end javascript is not completely functional.
 
 # Screenshots
-![working PORT]()
+![working PORT](nodePort.png)
+![working PORT](frontHTML.png)
+![working PORT](surveyHTML.png)
+
