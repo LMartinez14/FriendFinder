@@ -21,7 +21,3 @@ As you can see, the front end is available to view though the back end javascrip
 <div style='float: center'>
   <img style='width: 500px' src="surveyHTML.png"></img>
 </div>
-![working PORT](nodePort.png)
-![working PORT](frontHTML.png)
-![working PORT](surveyHTML.png)
-
