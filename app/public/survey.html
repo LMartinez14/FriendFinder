@@ -168,9 +168,9 @@
             parseInt($("#question10").val()),
           ]
         };
-        $.post("/api/friends", questionsToAsk, function (updateMatchInfo) {
-          $("#matchName").html("<h1>" + updateMatchInfo.name + "</h1>");
-          $("#matchProfilePicture").attr("src", updateMatchInfo.photo);
+        $.post("/api/friends", questionsToAsk, function (data) {
+          $("#matchName").html("<h1>" + data.name + "</h1>");
+          $("#matchProfilePicture").attr("src", data.photo);
 
           // pull up the modal
           $("#matchModal").modal("toggle");
