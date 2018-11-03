@@ -21,7 +21,7 @@ module.exports = function (app, path) {
    app.post("/api/friends", function (req, res) {
 
       // hold match object
-      let returnMatch = [];
+      let matchObject = [];
 
       // postResponse interface defines the API of a response container which can (and should)
       // be used by PostOperation services to prepare responses to be sent back to the client
