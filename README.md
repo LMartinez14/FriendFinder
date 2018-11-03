@@ -8,12 +8,12 @@ When running, the js code will append 10 questions along with a dropdown to use 
 
 <hr>
 
-# Deployed through Heroku
-Initial server must be listening through Heroku port by default and a node server is required. In the absence of a defined Heroku port, this app will run on port 3535.
+## Deployed through Heroku
+Initial server must be listening through Heroku port by default and a node server is required. If there is not defined Heroku port, this app will run on port 3535.
 
 <hr>
 
-# Problems Encountered
+## Problems Encountered
 As you can see, the front end is available to view though the back end javascript is not completely functional.
 
 <hr>
@@ -24,13 +24,17 @@ As you can see, the front end is available to view though the back end javascrip
   <img style='width: 500px' src="nodePort.png"></img>
 </div>
 
-<hr>
+<br>
+<br>
+<br>
 
 <div style='float: center'>
   <img style='width: 500px' src="frontHTML.png"></img>
 </div>
 
-<hr>
+<br>
+<br>
+<br>
 
 <div style='float: center'>
   <img style='width: 500px' src="surveyHTML.png"></img>
