@@ -15,9 +15,15 @@ As you can see, the front end is available to view though the back end javascrip
 <div style='float: center'>
   <img style='width: 500px' src="nodePort.png"></img>
 </div>
+
+<br>
+
 <div style='float: center'>
   <img style='width: 500px' src="frontHTML.png"></img>
 </div>
+
+<br>
+
 <div style='float: center'>
   <img style='width: 500px' src="surveyHTML.png"></img>
 </div>
