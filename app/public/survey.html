@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <title>Finding Friendly Friends</title>
+</head>
+
+<body>
+
+  <!-- creates a modal that pops up and display both the name and picture of the closest match
+  from bootstrap modal documentation page -->
+  <div id="matchModal" class="modal fade" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title"><em>Your closest match is... </em></h3>
+            <button type="button" class="close" data-dismiss="modal" aria-level="Close">
+              <span aria-hidden="true"> &times; </span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="matchNameModal"></div>
+            <img id="matchImageModal" class="img img-responsive" alt="Congrats, you found someone whose photo broke my app." />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- container to hold the name and picture id="profileContainer" -->
+  <div class="container text-center">
+    <div id="surveyQuestions">
+      <h2> Survey Questions </h2>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-12">
+        <h5> About You </h5>
+      </div>
+
+      <div class="col-12">
+        <h6> Name (Required) </h6>
+        <input type="text" class="form-control" id="nameForm" placeholder="John Doe">
+      </div>
+
+      <div class="col-12">
+        <h6> Profile Picture (Required) </h6>
+        <input type="text" class="form-control" id="pictureForm" placeholder="Your excited face">
+      </div>
+    </div>
+    <hr>
+  </div>
+  <!-- submit button at the end of the page-->
+  <div class="row text-center">
+    <div class="col-2 offset-5">
+        <button type="button" onclick="questionsToAsk()"> Submit &#10003; </button>
+    </div>
+  </div>
+
+  <!-- run the program for the app
+  <script type="text/javascript" src="../data/questions.js"> </script> -->
+
+  <script>
+
+    function questionsToAsk() {
+      let question1 = "I love dogs.";
+      let question2 = "I hate cats.";
+      let question3 = "Christmas should be a year round holiday.";
+      let question4 = "Motorcycles represent freedom.";
+      let question5 = "College was so worth it.";
+      let question6 = "Columbus day should be abolished.";
+      let question7 = "Tacos are the greatest food ever.";
+      let question8 = "Tequila.";
+      let question9 = "Most people are stupid.";
+      let question10 = "Dinner and a movie is a terrible first date idea.";
+
+      let questionArray = [question1, question2, question3, question4, question5, question6, question7, question8, question9, question10];
+      return questionArray;
+    }
+
+    let questions = questionsToAsk();
+
+    $("#surveyQuestions").append('div class = "row"></div>');
+
+    for (let i = 0; i < questions.length; i++) {
+      $("#surveyQuestions").append("<h4> Question" + (i + 1) + "<h4>" + "<p>" + questions[i] + "<p>" +
+        "<select id = 'answerDropdown' class = 'chosen-select'>"
+        + '<option value=""></option>'
+        + '<option value="1">1 (Strongly Agree)</option>'
+        + '<option value="2">2 (Somewhat Agree)</option>'
+        + '<option value="3">3 (Meh)</option>'
+        + '<option value="4">4 (Somewhat Digree)</option>'
+        + '<option value="5">5 (Strongly Disgree)</option>'
+        + "</select>"
+      );
+    }
+    $("#surveyQuestions").append(
+      '<button type="submit" class="btn btn-primary" id="submitButton">
+      < em ></em >
+      Submit </button > ' + '</div ></div > '
+    );
+
+    for (let selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+
+    // when the user presses submit button
+    // load tihis function
+    $("#submitButton").on("click", function (event) {
+      // don't restart the app
+      event.preventDefault();
+
+      // check the form for errors
+      function validateUserInputs() {
+        let valid = true;
+
+        // check if name is empty
+        if ($("#nameForm").val() === " ") {
+          valid = false;
+        }
+
+        // check if photo is uploaded
+        if ($("#pictureForm").val() === " ") {
+          valid = false;
+        }
+
+        // check if questions are all submitted
+        $(".chosen-select").each(function () {
+          if ($(this).val() === "") {
+            valid = false;
+          }
+        });
+        return valid;
+      }
+
+      if (validateUserInputs()) {
+        let storedAnswers = {
+          "Name": $(#nameForm).val().trim(),
+          "Profile Picture": $(#pictureForm).val().trim(),
+          "userResponses": [
+            parseInt($("#question1").val()),
+            parseInt($("#question2").val()),
+            parseInt($("#question3").val()),
+            parseInt($("#question4").val()),
+            parseInt($("#question5").val()),
+            parseInt($("#question6").val()),
+            parseInt($("#question7").val()),
+            parseInt($("#question8").val()),
+            parseInt($("#question9").val()),
+            parseInt($("#question10").val()),
+          ]
+        };
+        $.post("/api/friends", questionsToAsk, function (updateMatchInfo) {
+          $("#matchName").html("<h1>" + updateMatchInfo.name + "</h1>");
+          $("#matchProfilePicture").attr("src", updateMatchInfo.photo);
+
+          // pull up the modal
+          $("#matchModal").modal("toggle");
+        });
+      }
+      else {
+        alert("You left some of the good stuff out :)");
+      }
+    });
+    module.exports = exportQuestionArray;
+
+  </script>
+
+</body>
+
+</html>
