@@ -14,7 +14,7 @@ Initial server must be listening through Heroku port by default and a node serve
 <hr>
 
 ## Problems Encountered
-As you can see, the front end is available to view though the back end javascript is not completely functional.
+As you can see, the front end is available to view though the back end javascript is not completely functional and does not yet append to the client-side.
 
 <hr>
 
