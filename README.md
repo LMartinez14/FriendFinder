@@ -3,3 +3,12 @@ This full-stack site will take in results from the users' surveys, then compare 
 
 ## How to Use
 When running, the js code will append 10 questions along with a dropdown to use a Likert scale. These options will be stored in an object that will be compared to other user's data to find the closest "match."
+
+# Deployed through Heroku
+Initial server must be listening through Heroku port by default and a node server is required. In the absence of a defined Heroku port, this app will run on port 3535.
+
+# Problems Encountered
+As you can see, the front end is available to view though the back end javascript is not completely functional.
+
+# Screenshots
+![working PORT]()
