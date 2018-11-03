@@ -25,13 +25,11 @@ As you can see, the front end is available to view though the back end javascrip
 </div>
 
 <br>
-<br>
 
 <div style='float: center'>
   <img style='width: 500px' src="frontHTML.png"></img>
 </div>
 
-<br>
 <br>
 
 <div style='float: center'>
