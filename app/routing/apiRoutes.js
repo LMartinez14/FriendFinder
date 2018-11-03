@@ -53,7 +53,7 @@ module.exports = function (app, path) {
 
          possiblePartnerData.push(friends[closestMatch]);
 
-         // Add the new person to the existing array
+         // add the new person to the existing array
          friends.push(JSON.parse(postResponse));
 
          // Push back the entire updated result immediately
