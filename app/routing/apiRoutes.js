@@ -57,7 +57,7 @@ module.exports = function (app, path) {
          friends.push(JSON.parse(postResponse));
 
          // return
-         fs.writeFile("./app/data/friends.js", JSON.stringify(friends));
+         fs.writeFile("./data/friends.js", JSON.stringify(friends));
          res.send(possiblePartnerData[0]);
 
       });
