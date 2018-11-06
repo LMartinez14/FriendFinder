@@ -26,24 +26,24 @@
   <!-- creates a modal that pops up and display both the name and picture of the closest match
   from bootstrap modal documentation page -->
   <div id="matchModal" class="modal fade" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title"><em>Your closest match is... </em></h3>
-            <button type="button" class="close" data-dismiss="modal" aria-level="Close">
-              <span aria-hidden="true"> &times; </span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div id="matchNameModal"></div>
-            <img id="matchImageModal" class="img img-responsive" alt="Congrats, you found someone whose photo broke my app." />
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"><em>Your closest match is... </em></h4>
+          <button type="button" class="close" data-dismiss="modal" aria-level="Close">
+            <span aria-hidden="true"> &times; </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="matchNameModal"></div>
+          <img id="matchImageModal" class="img img-responsive" alt="Congrats, you found someone whose photo broke my app." />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
+  </div>
 
   <!-- container to hold the name and picture id="profileContainer" -->
   <div class="container text-center">
@@ -68,10 +68,104 @@
     </div>
     <hr>
   </div>
+
+  <!-- questions harcoded vs. as a function-->
+  <div class="QuestionsContainer">
+    <div class="row">
+      <div class="col-10 offset-2">
+        <h4>Question 1</h4>
+      </div>
+      <div class="col-8 offset-2">
+        <h5>"I love dogs."</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-10 offset-2">
+        <h4>Question 2</h4>
+      </div>
+      <div class="col-8 offset-2">
+        <h5>"I hate cats."</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-10 offset-2">
+        <h4>Question 3</h4>
+      </div>
+      <div class="col-8 offset-2">
+        <h5>"Christmas should be a year round holiday."</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-10 offset-2col-10 offset-2">
+        <h4>Question 4</h4>
+      </div>
+      <div class="col-8 offset-2">
+        <h5>"Motorcycles represent freedom."</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-10 offset-2col-10 offset-2">
+        <h4>Question 5</h4>
+      </div>
+      <div class="col-8 offset-2">
+        <h5>"College was so worth it."</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-10 offset-2col-10 offset-2">
+        <h4>Question 6</h4>
+      </div>
+      <div class="col-8 offset-2">
+        <h5>"Columbus day should be abolished."</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-10 offset-2col-10 offset-2">
+        <h4>Question 7</h4>
+      </div>
+      <div class="col-8 offset-2">
+        <h5>"Tacos are the greatest food ever."</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-10 offset-2col-10 offset-2">
+        <h4>Question 8</h4>
+      </div>
+      <div class="col-8 offset-2">
+        <h5> "Tequila."</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-10 offset-2">
+        <h4>Question 9</h4>
+      </div>
+      <div class="col-8 offset-2">
+        <h5>"Most people are stupid."</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-10 offset-2">
+        <h4>Question 10</h4>
+      </div>
+      <div class="col-8 offset-2">
+        <h5>"Dinner and a movie is a terrible first date idea."</h5>
+      </div>
+    </div>
+  </Div>
+
   <!-- submit button at the end of the page-->
   <div class="row text-center">
     <div class="col-2 offset-5">
-        <button type="button" onclick="questionsToAsk()"> Submit &#10003; </button>
+      <button type="btn btn-primary btn-lg" onclick="questionsToAsk()"> Submit &#10003; </button>
     </div>
   </div>
 
@@ -185,4 +279,5 @@
   </script>
 
 </body>
+
 </html>
