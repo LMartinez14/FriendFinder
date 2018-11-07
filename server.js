@@ -9,6 +9,8 @@ let app = express();
 // set up heroku port
 let PORT = process.env.PORT || 3535;
 
+app.use(express.static(path.join(__dirname, "/app/public")));
+
 // express data parsing within the body
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
